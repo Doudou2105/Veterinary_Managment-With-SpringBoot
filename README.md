@@ -4,13 +4,13 @@ It offers care for your pets as well as the possibility to visit them.
 In the clinic we have :
 
 # System :
-Specialty (name )
-Vet (firstName, lastName, specialties)
-PetType ( name)
+* Specialty (name )
+* Vet (firstName, lastName, specialties)
+* PetType ( name)
 # Owner :
-Pet (name, dateOfBirth, petType, visits)
-Owner (firstName, lastName, address, city, telephone, pets)
-Visit( date, description)
+* Pet (name, dateOfBirth, petType, visits)
+* Owner (firstName, lastName, address, city, telephone, pets)
+* Visit( date, description)
 # Extrac :
 The admin have to log in to have access to the system
 * I did not finish this project 
