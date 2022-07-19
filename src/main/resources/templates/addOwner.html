@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" xmlns="http://thymeleaf.com">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Add owner Page</title>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+		<i class="material-icons" style="font-size:48px;color:white;">pets</i>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="/"><strong>Home</strong><span class="sr-only">(current)</span>
+				</a>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="/ownerpage"><strong>Owners</strong><span class="sr-only">(current)</span>
+				</a>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="/vetlist"><strong>Vet_Available</strong><span class="sr-only">(current)</span>
+				</a>
+				</li>
+			</ul>
+			
+		</div>
+	</nav>
+			<br><br>
+				<div class="container overflow-hidden">
+				<form th:action="@{/addOwner_mapping}" method="post">
+				  <div class="row gx-5">
+				    <div class="col">
+				     <div class="p-3 text-primary"><strong>Add Owner</strong></div>
+						<br>
+							<div class="form-group">
+								<label>firstName</label> <input type="text" class="form-control" name="firstName">
+							</div>
+							<div class="form-group">
+								<label>lastName</label> <input type="text" class="form-control" name="lastName">
+							</div>
+							<div class="form-group">
+								<label>address</label> <input type="text" class="form-control" name="address">
+							</div>
+							<div class="form-group">
+								<label>city</label> <input type="text" class="form-control" name="city">
+							</div>
+							<div class="form-group">
+								<label>telephone</label> <input type="number" class="form-control" name="telephone">
+							</div>
+							
+							
+						    </div>
+						    <div class="col">
+						      <div class="p-3 text-primary"> <strong>Add Pets</strong> </div><br>
+						      <div class="form-group">
+								<label>Name</label> <input type="text" class="form-control" name="name">
+							</div>
+							<div class="form-group">
+								<label>Date of Birthday</label> <input type="date" class="form-control" name="date">
+							</div>
+							<div class="form-group  form-floating">
+								 <select class="form-select " id="floatingSelect" aria-label="Floating label select example" name="petType" type="text" style="width:100%; height:40px;">
+								    <option selected></option>
+								    <option value="dog">Dog</option>
+								    <option value="bird">Bird</option>
+								    <option value="cat">Cat</option>
+								    <option value="hamster">Hamster</option>
+								    <option value="lizard">Lizard</option>
+								  </select>
+ 									 <label for="floatingSelect"></label>
+							</div>
+							<div class="form-group">
+								<label>Description</label> <input type="text" class="form-control" name="description">
+							</div>
+							
+						    </div>
+						  </div>
+						  <button type="submit" class="btn btn-info">Submit</button>&nbsp;&nbsp;&nbsp;
+						  <a href="/ownerpage">Go Back</a>
+						  </form> 
+						</div>
+		
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
